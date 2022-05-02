@@ -3,7 +3,6 @@ package services;
 import models.Item;
 import producers.IProducer;
 import producers.ItemCreatedProducer;
-import producers.UserCreatedProducer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ItemService {
-    private List<Item> items = new ArrayList<>();
+    private final List<Item> items = new ArrayList<>();
 
     Map<String, IProducer> producers = new HashMap<>();
 

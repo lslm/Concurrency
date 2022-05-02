@@ -2,7 +2,6 @@ package services.ui;
 
 import brokers.Broker;
 import models.Item;
-import models.User;
 
 import java.util.Scanner;
 

@@ -2,7 +2,6 @@ package services.ui;
 
 import brokers.Broker;
 import models.User;
-import models.ui.Action;
 
 import java.util.Scanner;
 
@@ -17,7 +16,9 @@ public class CreateUserUIService {
         System.out.print("Now tell the email: ");
         String email = scanner.nextLine();
 
-        Runnable userCreation = () -> Broker.getInstance().publish("newUser", new User(name, email));
+        User newUser = new User(name, email);
+
+        Runnable userCreation = () -> Broker.getInstance().publish("newUser", newUser);
         createUserAsync(userCreation);
     }
 

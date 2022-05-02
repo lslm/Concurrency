@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 public class UserService {
-    private List<User> users = new ArrayList<>();
+    private final List<User> users = new ArrayList<>();
 
     Map<String, IProducer> producers = new HashMap<>();
 
